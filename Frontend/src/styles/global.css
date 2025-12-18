@@ -1,3 +1,4 @@
+@import "tailwindcss";
 * {
   margin: 0;
   padding: 0;
@@ -313,12 +314,148 @@ body {
   opacity: 0.9;
 }
 
+/* About Section Styles */
+.about-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #F3E8FF;
+  padding: 5rem 1.5rem;
+}
+
+.about-bg-element-top {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: rgba(196, 181, 253, 0.5);
+  filter: blur(120px);
+}
+
+.about-bg-element-bottom {
+  position: absolute;
+  bottom: -10%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: rgba(165, 180, 252, 0.5);
+  filter: blur(120px);
+}
+
+.about-content {
+  position: relative;
+  z-index: 10;
+  max-width: 56rem;
+  width: 100%;
+  text-align: center;
+}
+
+.about-heading {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #1f2937;
+}
+
+@media (min-width: 768px) {
+  .about-heading {
+    font-size: 3.75rem;
+  }
+}
+
+.about-space-y {
+  margin-top: 2.5rem;
+}
+
+.about-hero-text {
+  font-size: 1.5rem;
+  line-height: 1.375;
+  color: #374151;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .about-hero-text {
+    font-size: 1.875rem;
+  }
+}
+
+.about-highlight {
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+.about-subtitle {
+  display: block;
+  margin-top: 0.5rem;
+  color: #6b7280;
+  font-style: italic;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .about-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+.about-divider {
+  width: 6rem;
+  height: 0.25rem;
+  background: linear-gradient(to right, transparent, #818cf8, transparent);
+  margin: 0 auto;
+  opacity: 0.4;
+}
+
+.about-features {
+  display: grid;
+  gap: 2rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .about-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.about-feature-card {
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.about-feature-text {
+  color: #4b5563;
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+.about-accent-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+  background-color: #715CBA;
+}
+
 @media (max-width: 768px) {
   .user-stats {
     flex-direction: column;
     gap: 15px;
   }
-  
+
   .victory-stats {
     flex-direction: column;
     gap: 20px;

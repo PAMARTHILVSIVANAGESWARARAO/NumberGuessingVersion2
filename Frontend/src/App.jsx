@@ -6,13 +6,15 @@ import Dashboard from './pages/Dashboard';
 import Game from './pages/Game';
 import History from './pages/History';
 import Leaderboard from './pages/Leaderboard';
+import Hero from './hero/Hero';
+
 import './styles/global.css';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Navigate to="/login" replace />} />
+        <Route path="/" element={<Hero />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         
